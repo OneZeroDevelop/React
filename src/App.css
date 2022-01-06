@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.paragraph{
+  color: red;
+}
+.customButton {
+  margin-right: 20px !important;
+}
+.customInput {
+  width: 100%;
+  margin-bottom: 20px;
+}
