@@ -3,42 +3,34 @@ import React, { useState } from 'react';
 function Ncomponent() {
 
 
-	class Example extends React.Component {
-		constructor(props) {
-			super(props);
-			this.state = {
-				name: ''
-			}
-		}
-	}
-
-	 const [count, setCount] = useState(0);
-	 const [name, setName] = useState('');
+const [showedName, setShowedName] = useState('Введите имя пользователя: ');
+const [count, setCount] = useState(0);
+const [name, setName] = useState('');
 
 
-	const handleSubmit =(event)=>{
+const handleSubmit =(event)=>{
 		event.preventDefault();
 		console.log(name, count)
-		console.log('Кликнуто')
+		console.log('Кликнуто на handleSubmit')
+
 	}
 
-	function handleClick(event) {
+function handleClick(event) {
 		event.preventDefault();
-		console.log('хоба');
-	}
-
-	if (name === "") {
-		console.log('В поле имя ничего не вписанно!');
-	} else {
-		console.log('В поле имя вписанно :' + name);
+		if(name === "") {
+			console.log('Поле имя пустое');
+			setShowedName('Введите имя пользователя!');
+		} else {
+			setShowedName(name);
+		}
 	}
 
 return (
 
 
 		<div>
-			<h3>{name}</h3>
-			<p>Вы кликнули {count} раз(а) </p>
+			<h3>{showedName}</h3>
+			<p>Вы кликнули {count} раз(а)</p>
 
 			<button onClick={() => setCount(count + 1)}>Нажми на меня</button>
 
