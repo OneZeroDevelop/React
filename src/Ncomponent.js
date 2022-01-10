@@ -11,7 +11,7 @@ const [name, setName] = useState('');
 const handleSubmit =(event)=>{
 		event.preventDefault();
 		console.log(name, count)
-		console.log('Кликнуто на handleSubmit')
+		console.log('Форма отправлена!')
 
 	}
 
