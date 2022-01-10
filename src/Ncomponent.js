@@ -19,7 +19,7 @@ function handleClick(event) {
 		event.preventDefault();
 		if(name === "") {
 			console.log('Поле имя пустое');
-			setShowedName('Введите имя пользователя!');
+			setShowedName('Введите имя пользователя: ');
 		} else {
 			setShowedName(name);
 		}
